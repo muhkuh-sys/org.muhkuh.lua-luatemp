@@ -1,0 +1,21 @@
+LIBUSB_1_0_CFLAGS=-I/home/niklas/Workspace/org.muhkuh.lua-tempsensor/build/linux/external/libusb_1.0/install/include LIBUSB_1_0_LIBS=/home/niklas/Workspace/org.muhkuh.lua-tempsensor/build/linux/external/libusb_1.0/install/lib/libusb.a ./configure --enable-shared=no --enable-static=yes --with-pic=yes
+
+./.build linux
+
+pwd -> show complete path
+
+~$ sudo chown -R niklas:niklas copy msys temp-sensor.tar.gz -> change permissions on files
+
+make
+
+make clean
+
+LIBUSB_1_0_CFLAGS=-I/home/niklas/Workspace/org.muhkuh.lua-tempsensor/build/linux/external/libusb_1.0/install/include LIBUSB_1_0_LIBS=/home/niklas/Workspace/org.muhkuh.lua-tempsensor/build/linux/external/libusb_1.0/install/lib/libusb.a ./configure --enable-static --with-pic
+
+https://rix0r.nl/blog/2015/08/13/cmake-guide/ -> Maybe helpful?!
+
+
+DATE: 190829
+https://answers.ros.org/question/218015/problem-in-determining-a-link-language-while-using-external-libraries/
+http://docs.ros.org/jade/api/catkin/html/howto/format2/building_libraries.html
+
