@@ -54,7 +54,7 @@ elif [ "$TARGET" == "raspberry" ]; then
 	mkdir -p ${PKGBASE}
 	pushd ${PKGBASE}
 	echo $PKGBASE
-	${PRJ_DIR}/cmake/tools/get_dependencies.sh libacl1-dev:arm64
+	${PRJ_DIR}/cmake/tools/get_dependencies.sh libudev-dev:arm64
 	popd
 
 	CMAKE_CROSS_COMPILER="-DCMAKE_TOOLCHAIN_FILE=${PRJ_DIR}/cmake/toolchainfiles/toolchain_ubuntu_arm64.cmake"
