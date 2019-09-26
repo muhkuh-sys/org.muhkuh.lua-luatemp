@@ -101,7 +101,7 @@ make
 make install
 popd
 # Get the additional CMAKE search paths.
-CMAKE_PATHS="-DEXTERNAL_LIB_DIR=${BUILD_DIR}/external/install/lib -DEXTERNAL_INCLUDE_DIR=${BUILD_DIR}/external/install/include -Dnet.zlib-zlib_DIR=${NET_ZLIB_ZLIB_DIR}"
+CMAKE_PATHS="-DEXTERNAL_LIB_DIR=${BUILD_DIR}/external/install/lib -DEXTERNAL_INCLUDE_DIR=${BUILD_DIR}/external/install/include"
 
 echo "************Stopt by: Build LUA%.1 Version"
 # Build the LUA5.1 version.
