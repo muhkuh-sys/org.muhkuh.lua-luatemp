@@ -33,9 +33,12 @@
 #include <stdint.h>
 #include <windows.h>
 #include <setupapi.h>
-#include <ddk/hidsdi.h>
-#include <ddk/hidclass.h>
-
+#if defined(__MINGW32__) || defined(__MINGW64__)
+#       include <hidsdi.h>
+#else
+#       include <ddk/hidsdi.h>
+#       include <ddk/hidclass.h>
+#endif
 #include "hid.h"
 
 

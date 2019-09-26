@@ -6,9 +6,15 @@ MESSAGE("*Use this path where the headers sleep")
 MESSAGE("{CMAKE_BINARY_DIR}": ${CMAKE_BINARY_DIR})
 MESSAGE("{CMAKE_CURRENT_SOURCE_DIR}:" ${CMAKE_CURRENT_SOURCE_DIR})
 
-# TODO: detect host
-SET(SOURCES_libtempsensor
-    hid_LINUX.c)
+IF(UNIX)
+	SET(SOURCES_libtempsensor
+	    hid_LINUX.c)
+ELSEIF(WIN32)
+	SET(SOURCES_libtempsensor
+	    hid_WINDOWS.c)
+ELSE(UNIX)
+	MESSAGE(FATAL_ERROR "Unsupported host.")
+ENDIF(UNIX)
 
 #Hier wird das Target erstellt
 ADD_LIBRARY(TARGET_libtempsensor
