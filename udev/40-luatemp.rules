@@ -1,0 +1,19 @@
+ACTION!="add|change", GOTO="luatemp_rules_end"
+
+#-----------------------------------------------------------------------------
+#
+# USB rules
+#
+SUBSYSTEM!="usb", GOTO="luatemp_usb_rules_end"
+ENV{DEVTYPE}!="usb_device", GOTO="luatemp_usb_rules_end"
+
+# Hilscher Color Controller
+ATTRS{idVendor}=="16c0", ATTRS{idProduct}=="0480", MODE="664", GROUP="plugdev"
+
+LABEL="luatemp_usb_rules_end"
+
+
+#-----------------------------------------------------------------------------
+
+LABEL="luatemp_rules_end"
+
