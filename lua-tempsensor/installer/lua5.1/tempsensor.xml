@@ -10,7 +10,7 @@
 		<license name="GPL-V2"/>
 		<author name="Muhkuh Team" url="https://github.com/muhkuh-sys/org.muhkuh.lua-tempsensor" />
 		<description>
-			LUA bindings for ...
+			LUA bindings for the temperature sensor routines from https://www.led-genial.de/ .
 		</description>
 	</info>
 	<dependencies>
